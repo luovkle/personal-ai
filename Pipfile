@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+python-dotenv = "*"
+gunicorn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
+
+[scripts]
+dev = "flask --app app/main:app --debug run --port 8000"
+prod = "gunicorn app.main:app --bind 0.0.0.0:8000"

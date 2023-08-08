@@ -1,0 +1,16 @@
+{
+  "name": "profile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:css": "tailwindcss -i ./app/static/input.css -o ./app/static/public/styles.css --watch",
+    "build:css": "tailwindcss -i ./app/static/input.css -o ./app/static/public/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
