@@ -1,0 +1,9 @@
+<div class="bg-cardbg p-6 rounded-3xl flex justify-between">
+  <div class="flex items-center space-x-4">
+    <img src="{{ profile.picture.url }}" alt="{{ profile.name }}" class="rounded-full w-12">
+    <span class="text-lg font-semibold">{{ profile.name }}</span>
+  </div>
+  <div class="flex items-center">
+    {% include "_layout/chat/contact/info_icon.html" %}
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="overflow-y-auto scroll-smooth no-scrollbar mt-auto grow">
+  <div class="space-y-6 flex flex-col justify-end grow">
+    {% for message in messages %}
+      {% if message.user %}
+        {% include "_layout/chat/history/user_msg.html" %}
+      {% else %}
+        {% include "_layout/chat/history/bot_msg.html" %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

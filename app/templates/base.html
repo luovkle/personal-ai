@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/static/public/styles.css" rel="stylesheet">
   </head>
-  <body>
-    {% block main %}{% endblock main %}
+  <body class="bg-bodybg h-screen flex flex-row justify-between p-4 text-textcolor space-x-6">
+    <!-- Navbar -->
+    {% include "_layout/navbar.html" %}
+    <!-- End Navbar -->
+
+    <!-- Chat -->
+    {% include "_layout/chat.html" %}
+    <!-- End Chat -->
   </body>
 </html>
