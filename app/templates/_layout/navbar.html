@@ -1,11 +1,16 @@
-<nav class="bg-cardbg w-20 rounded-3xl p-6 flex flex-col justify-between items-center">
+<nav class="bg-cardbg rounded-2xl py-6 flex flex-col justify-between items-center">
   <span>
     {% include "_layout/navbar/circle_icon.html" %}
   </span>
-  <span>
-    {% include "_layout/navbar/chat_icon.html" %}
-  </span>
-  <span>
+  <div class="flex flex-col">
+    <a href="/profile" class="px-4 py-2 group">
+      {% include "_layout/navbar/profile_icon.html" %}
+    </a>
+    <a href="/chat" class="px-4 py-2 group">
+      {% include "_layout/navbar/chat_icon.html" %}
+    </a>
+  </div>
+  <a href="/settings" class="px-4 group">
     {% include "_layout/navbar/options_icon.html" %}
-  </span>
+  </a>
 </nav>
