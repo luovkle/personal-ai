@@ -8,6 +8,7 @@ flask = "*"
 python-dotenv = "*"
 gunicorn = "*"
 flask-socketio = "*"
+openai = "*"
 
 [dev-packages]
 
