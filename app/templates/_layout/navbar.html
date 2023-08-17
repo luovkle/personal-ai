@@ -3,14 +3,14 @@
     {% include "_layout/navbar/circle_icon.html" %}
   </span>
   <div class="flex flex-col">
-    <a href="/profile" class="px-4 py-2 group">
+    <a href="{{ url_for('profile') }}" class="px-4 py-2 group">
       {% include "_layout/navbar/profile_icon.html" %}
     </a>
-    <a href="/chat" class="px-4 py-2 group">
+    <a href="{{ url_for('chat') }}" class="px-4 py-2 group">
       {% include "_layout/navbar/chat_icon.html" %}
     </a>
   </div>
-  <a href="/settings" class="px-4 group">
+  <a href="{{ url_for('settings') }}" class="px-4 group">
     {% include "_layout/navbar/options_icon.html" %}
   </a>
 </nav>
