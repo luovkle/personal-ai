@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 from flask import Flask, render_template, session
 from flask_socketio import join_room, leave_room, send, SocketIO
 
+from app.utils.chatgpt import get_completion
+
 load_dotenv()
 
 data = {
@@ -50,6 +52,12 @@ def on_message(request):
     id = session.get("id")
     if id:
         response = {"data": request["data"]}
+        send(response, to=id)
+        response = {
+            "data": get_completion(request["data"]),
+            "owner": "bot",
+            "botData": data["profile"],
+        }
         send(response, to=id)
 
 
