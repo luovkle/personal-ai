@@ -12,5 +12,8 @@
   "license": "MIT",
   "devDependencies": {
     "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "socket.io-client": "^4.7.2"
   }
 }
