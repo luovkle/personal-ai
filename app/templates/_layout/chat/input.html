@@ -1,6 +1,16 @@
-<form method="post" class="space-x-3 flex">
-  <input type="text" name="input" value="" placeholder="Message..." class="bg-chatbg placeholder-textcolor p-4 rounded-2xl grow focus:outline-none" autocomplete="off">
-  <button type="submit" class="bg-cardbg p-4 rounded-2xl focus:outline-none group">
+<form onsubmit="sendMessage(event)" class="space-x-3 flex">
+  <input
+    type="text"
+    id="message"
+    name="message"
+    placeholder="Message..."
+    class="bg-chatbg placeholder-textcolor p-4 rounded-2xl grow focus:outline-none"
+    autocomplete="off"
+  />
+  <button
+    type="submit"
+    class="bg-cardbg p-4 rounded-2xl focus:outline-none group"
+  >
     {% include "_layout/chat/input/send_icon.html" %}
   </button>
 </form>
