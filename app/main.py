@@ -1,4 +1,5 @@
 import os
+from secrets import token_urlsafe
 
 from dotenv import load_dotenv
 from flask import Flask, render_template
@@ -13,6 +14,7 @@ data = {
 }
 
 app = Flask(__name__)
+app.config["SECRET_KEY"] = os.getenv("APP_SECRET_KEY", token_urlsafe(64))
 
 
 @app.route("/")
