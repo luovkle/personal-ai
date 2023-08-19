@@ -9,6 +9,8 @@ python-dotenv = "*"
 gunicorn = "*"
 flask-socketio = "*"
 openai = "*"
+beautifulsoup4 = "*"
+lxml = "*"
 
 [dev-packages]
 
