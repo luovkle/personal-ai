@@ -6,7 +6,7 @@ from flask import Flask, render_template, session
 from flask_socketio import join_room, leave_room, send, SocketIO
 
 from app.utils.chatgpt import get_completion
-from app.utils.repository import get_repo_data
+from app.utils.repository import get_projects
 from app.utils.data import data
 
 
@@ -18,7 +18,7 @@ socketio = SocketIO(app)
 @app.route("/")
 @app.route("/profile")
 def profile():
-    projects = [get_repo_data(repo) for repo in data["projects"]]
+    projects = get_projects(data["projects"])
     return render_template(
         "profile.html",
         profile=data["profile"],

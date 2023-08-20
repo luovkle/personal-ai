@@ -1,3 +1,5 @@
+import json
+from pathlib import Path
 from urllib.request import urlopen
 
 from bs4 import BeautifulSoup
@@ -41,3 +43,17 @@ def get_repo_data(url: str) -> dict:
         repo["langs"].append({"lang": lang, "percent": percent})
 
     return repo
+
+
+def get_projects(urls: list[str]):
+    data_path = Path.cwd() / "app" / "data"
+    repos_path = data_path / "repos.json"
+    if not repos_path.is_file():
+        if not data_path.is_dir():
+            data_path.mkdir()
+        repos = [get_repo_data(repo) for repo in urls]
+        with open(repos_path, "w") as f:
+            json.dump(repos, f)
+        return repos
+    with open(repos_path) as f:
+        return json.load(f)
