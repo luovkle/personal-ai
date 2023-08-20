@@ -1,0 +1,41 @@
+<div
+  class="bg-cardbg w-5/12 rounded-2xl p-8 lg:p-32 flex flex-col justify-center items-center space-y-6"
+>
+  <img
+    src="{{ profile.picture }}"
+    alt="{{ profile.name }}"
+    class="rounded-full w-44"
+  />
+  <div>
+    <h2 class="font-bold text-2xl">{{ profile.name }}</h2>
+    <span class="font-semibold text-lg">{{ profile.role }}</span>
+  </div>
+  <p>{{ profile.about }}</p>
+  <div class="space-y-8 flex flex-col items-center">
+    <div class="space-y-2">
+      <a
+        href="{{ contact.github }}"
+        target="_blank"
+        rel="noreferrer noopener"
+        class="flex space-x-2"
+      >
+        <span>{% include "_layout/profile/about/github_icon.html" %}</span>
+        <span>Github</span>
+      </a>
+      <a
+        href="{{ contact.linkedin }}"
+        target="_blank"
+        rel="noreferrer noopener"
+        class="flex space-x-2"
+      >
+        <span>{% include "_layout/profile/about/linkedin_icon.html" %}</span>
+        <span>Linkedin</span>
+      </a>
+    </div>
+    <div>
+      <a href="{{ resume }}" class="py-2 px-4 bg-chatbg" download
+        >Download Resume</a
+      >
+    </div>
+  </div>
+</div>

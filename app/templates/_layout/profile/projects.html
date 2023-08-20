@@ -1,0 +1,21 @@
+<div class="w-7/12 space-y-6 overflow-y-auto scroll-smooth no-scrollbar grow">
+  {% for project in projects %}
+  <div class="col-span-1 space-y-3 p-5 rounded-2xl bg-cardbg">
+    <a
+      href="{{ project.url }}"
+      target="_blank"
+      class="text-base font-semibold text-blue-400"
+    >{{ project.name }}</a
+    >
+    <p class="text-gray-400 line-clamp-2">{{ project.description }}</p>
+    <div class="text-sm text-gray-300 flex flex-wrap gap-x-4 gap-y-1">
+      {% for lang in project.langs %}
+      <div class="flex gap-2">
+        <span class="font-semibold">{{ lang.lang }}</span>
+        <span>{{ lang.percent }}%</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
