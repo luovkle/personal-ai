@@ -13,8 +13,8 @@ data = {
         "about": os.getenv("PROFILE_ABOUT", ""),
     },
     "contact": {
-        "github": os.getenv("PROFILE_CONTACT_GITHUB", ""),
-        "linkedin": os.getenv("PROFILE_CONTACT_LINKEDIN", ""),
+        "github": os.getenv("CONTACT_GITHUB", ""),
+        "linkedin": os.getenv("CONTACT_LINKEDIN", ""),
     },
     "resume": os.getenv("RESUME", ""),
     "projects": json.loads(os.getenv("PROJECTS", "[]")),
