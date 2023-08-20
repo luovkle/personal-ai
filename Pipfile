@@ -20,4 +20,4 @@ python_version = "3.11"
 
 [scripts]
 dev = "flask --app app/main:app --debug run --port 8000"
-prod = "gunicorn app.main:app --bind 0.0.0.0:8000"
+prod = "gunicorn app.main:app --bind 0.0.0.0:8000 -k gevent -w 1"
