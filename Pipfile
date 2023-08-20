@@ -11,6 +11,7 @@ flask-socketio = "*"
 openai = "*"
 beautifulsoup4 = "*"
 lxml = "*"
+gevent = "*"
 
 [dev-packages]
 
