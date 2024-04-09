@@ -5,7 +5,7 @@ from uuid import uuid4
 from flask import Flask, render_template, session
 from flask_socketio import join_room, leave_room, send, SocketIO
 
-from app.utils.chatgpt import get_completion
+from app.utils.chatgpt import get_completion_message
 from app.utils.repository import get_projects
 from app.utils.data import data
 
@@ -54,7 +54,7 @@ def on_message(request):
         response = {"data": request["data"]}
         send(response, to=id)
         response = {
-            "data": get_completion(request["data"]),
+            "data": get_completion_message(request["data"]),
             "owner": "bot",
             "botData": data["profile"],
         }
