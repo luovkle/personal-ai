@@ -1,13 +1,13 @@
 import os
 
-import openai
+from openai import OpenAI
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
 def get_completion(input: str) -> str:
-    chat_completion = openai.ChatCompletion.create(
-        model=os.getenv("OPENAI_MODEL"),
+    chat_completion = client.chat.completions.create(
+        model=os.getenv("OPENAI_MODEL", ""),
         max_tokens=int(os.getenv("OPENAI_MAX_TOKENS", "")),
         temperature=float(os.getenv("OPENAI_TEMPERATURE", "")),
         messages=[
