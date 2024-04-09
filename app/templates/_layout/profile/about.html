@@ -6,11 +6,11 @@
     alt="{{ profile.name }}"
     class="rounded-full w-44"
   />
-  <div>
-    <h2 class="font-bold text-2xl">{{ profile.name }}</h2>
-    <span class="font-semibold text-lg">{{ profile.role }}</span>
+  <div class="flex flex-col items-center gap-1">
+    <h2 class="font-bold text-3xl">{{ profile.name }}</h2>
+    <span class="font-semibold text-md">{{ profile.role }}</span>
   </div>
-  <p>{{ profile.about }}</p>
+  <p class="text-justify">{{ profile.about }}</p>
   <div class="space-y-8 flex flex-col items-center">
     <div class="space-y-2">
       <a
